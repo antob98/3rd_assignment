@@ -1,0 +1,10 @@
+#Parameters used within the user interface defined for our assignment, to allow the user to change 
+#control modalities for the robot dinamically
+
+goal_srv_active: {p: 0, goal_x: 0.0, goal_y: 0.0}
+
+timer_srv_active: {p: False, x: 0.0, y: 0.0}
+
+teleop_srv_active: {p: False, control: False}
+
+tele_ctrl_active: {p: False, linear: 0.0, angular: 0.0}

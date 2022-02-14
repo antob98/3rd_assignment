@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+  <rosparam file="$(find final_assignment)/param/final_assignment_params.yaml" command="load"/>
+  <node pkg="final_assignment" type="user.py" respawn="false" name="userinterface" output="screen"/>
+  <node pkg="final_assignment" type="goal_service.py" respawn="false" name="goal_server"/>
+  <node pkg="final_assignment" type="my_timer.py" respawn="false" name="timer_server"/>
+  <node pkg="final_assignment" type="teleservice.py" respawn="false" name="tele_srv" output="screen" launch-prefix="xterm -e"/>
+  <node pkg="final_assignment" type="tele_control.py" respawn="false" name="tele_control"/>
+</launch>
